@@ -1,0 +1,49 @@
+<html>
+	<head><title>Cart Page</title></head>
+	<body>
+		<script>
+			dataLayer=[{
+			  'event': 'checkout',
+			  'ecommerce': {
+			    'checkout': {	// Optional. Dynamic.
+			      'actionField': {	// Optional. Dynamic.
+				'step': 'cart'	// Optional. Dynamic. Numeric value.
+			      },
+			      'products': [{	// Optional. Dynamic.
+				  'name': 'Product One',	// Required. Dynamic. String value.
+				  'id': '1000',	// Required. Dynamic. String value.
+				  'price': '10.00',	// Required. Dynamic. String value.
+				  'brand': 'BioTrust',	// Required. Dynamic. String value.
+				  'quantity': 1	// Required. Dynamic. Numeric value.
+				}, {
+				  'name': 'Product Two',	// Required. Dynamic. String value.
+				  'id': '2000',	// Required. Dynamic. String value.
+				  'price': '15.00',	// Required. Dynamic. String value.
+				  'brand': 'BioTrust',	// Required. Dynamic. String value.
+				  'quantity': 1	// Required. Dynamic. Numeric value.
+				  }]
+			  }}
+			}];
+		</script>
+	
+		<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P7W7RQ"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-P7W7RQ');</script>
+		<!-- End Google Tag Manager -->
+
+
+		Return <a href="http://www.thesteigers.com">Home</a><br><br>
+
+		This is a cart page, click checkout below to check out.
+
+		<ul>
+			<li><a href="http://www.thesteigers.com/checkout.html">CHECKOUT</a></li>
+		</ul>
+		</br><b>Order - {{session['order']}}</b>
+	</body>
+</html>

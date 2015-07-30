@@ -1,0 +1,65 @@
+<html>
+	<head><title>Product Page 1</title></head>
+	<body>
+		<script>
+		dataLayer = [{
+		  "ecommerce": {
+		    "detail": {	// Optional. Dynamic.
+		      "actionField": {	// Optional. Dynamic.
+			"list": "Search Results"	// Optional. Dynamic. String value.
+		      },
+		      "products": [{	// Optional. Dynamic.
+			  "name": "Product One",	// Required. Dynamic. String value.
+			  "id": "1000",	// Required. Dynamic. String value.
+			  "price": "10.00",	// Required. Dynamic. String value.
+			  "brand": "BioTrust",	// Required. Dynamic. String value.
+			  "quantity": 1	// Required. Dynamic. Numeric value.
+
+		      }]
+		    }
+		  }
+		}];
+
+		function aCart() {
+			dataLayer.push({
+			  "event": "addToCart",
+			  "ecommerce": {
+			    "add": {	// Optional. Dynamic.
+			      "products": [{	// Optional. Dynamic.
+				  "name": "Product One",	// Required. Dynamic. String value.
+				  "id": "1000",	// Required. Dynamic. String value.
+				  "price": "10.00",	// Required. Dynamic. String value.
+				  "brand": "BioTrust",	// Required. Dynamic. String value.
+				  "quantity": 1	// Required. Dynamic. Numeric value.
+			      }]
+			    }
+			  }
+			});
+		}
+
+		</script>
+
+		<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P7W7RQ"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-P7W7RQ');</script>
+		<!-- End Google Tag Manager -->
+
+		Return <a href="http://www.thesteigers.com">Home</a><br><br>
+
+		This product is awesome... add it to your cart with the link below.
+
+		<ul>
+			<li><a href="http://www.thesteigers.com/cart.html?prod=1" id='addProd' onclick=aCart>Product 1</a></li>
+		</ul>
+		
+		<script>
+			var el = document.getElementById('addProd');
+			el.onclick = aCart;
+		</script>
+	</body>
+</html>
